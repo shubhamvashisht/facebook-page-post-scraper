@@ -56,7 +56,7 @@ def getFacebookPageFeedUrl(base_url):
 
 def getReactionsForStatuses(base_url):
 
-    reaction_types = ['like', 'love', 'wow', 'haha', 'sad', 'angry']
+    reaction_types = ['like', 'love', 'wow', 'haha', 'sad', 'angry', 'thankful']
     reactions_dict = {}   # dict of {status_id: tuple<6>}
 
     for reaction_type in reaction_types:
@@ -129,7 +129,7 @@ def scrapeFacebookPageFeedStatus(group_id, access_token):
         w.writerow(["status_id", "status_message", "status_author", "link_name",
                     "status_type", "status_link", "status_published",
                     "num_reactions", "num_comments", "num_shares", "num_likes",
-                    "num_loves", "num_wows", "num_hahas", "num_sads", "num_angrys"])
+                    "num_loves", "num_wows", "num_hahas", "num_sads", "num_angrys", "num_thankfuls"])
 
         has_next_page = True
         num_processed = 0   # keep a count on how many we've processed
